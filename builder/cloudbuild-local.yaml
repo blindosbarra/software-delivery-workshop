@@ -72,5 +72,6 @@ steps:
           kubectl apply --namespace ${_USER} --recursive -f kubernetes/services
 
           echo service available at http://`kubectl --namespace=${_USER} get service/gceme-frontend -o jsonpath="{.status.loadBalancer.ingress[0].ip}"`
-
-        
+options:
+  pool:
+    name: 'projects/PROJECT_ID/locations/europe-west3/workerPools/POOL_ID'

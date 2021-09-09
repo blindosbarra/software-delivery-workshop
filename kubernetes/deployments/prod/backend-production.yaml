@@ -43,7 +43,7 @@ spec:
           httpGet:
             path: /healthz
             port: 8080
-        command: ["sh", "-c", "app -port=8080"]
+        command: ["sh", "-c", "/app/app -port=8080"]
         ports:
         - name: backend
           containerPort: 8080

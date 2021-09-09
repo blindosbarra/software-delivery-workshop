@@ -68,3 +68,7 @@ steps:
           kubectl apply --namespace production --recursive -f kubernetes/deployments/prod
           kubectl apply --namespace production --recursive -f kubernetes/services
 
+
+options:
+  pool:
+    name: 'projects/PROJECT_ID/locations/europe-west3/workerPools/POOL_ID'

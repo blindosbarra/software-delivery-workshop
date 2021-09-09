@@ -68,4 +68,6 @@ steps:
           kubectl get ns ${BRANCH_NAME} || kubectl create ns ${BRANCH_NAME}
           kubectl apply --namespace ${BRANCH_NAME} --recursive -f kubernetes/deployments/dev
           kubectl apply --namespace ${BRANCH_NAME} --recursive -f kubernetes/services
-
+options:
+  pool:
+    name: 'projects/PROJECT_ID/locations/europe-west3/workerPools/POOL_ID'

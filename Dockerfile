@@ -11,5 +11,10 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
-FROM golang:onbuild
+FROM golang:1.15-alpine
+ADD . /app
+WORKDIR /app
+RUN apk update && apk add git
+RUN go get cloud.google.com/go/compute/metadata
+RUN go build -o app
+EXPOSE 8080

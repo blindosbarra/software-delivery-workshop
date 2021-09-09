@@ -89,3 +89,7 @@ steps:
           kubectl apply --namespace $${NS} --recursive -f kubernetes/deployments/$${TARGET_ENV}
           kubectl apply --namespace $${NS} --recursive -f kubernetes/services
 
+
+options:
+  pool:
+    name: 'projects/PROJECT_ID/locations/europe-west3/workerPools/POOL_ID'
